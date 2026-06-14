@@ -9,9 +9,9 @@ export default function ExperienceBubbles() {
       year: "2026",
       image: cauImg,
       title: "AI International Hackathon",
-      subtitle: "Top 1 - Central Asian University",
+      subtitle: "as a Participant - Central Asian University",
       description:
-        "Participated in an international AI hackathon and achieved Top 1. This experience became a major shift in my learning curve and helped me understand how competitive international AI environments work.",
+        "Participated in an international AI hackathon and achieved as a Participant. This experience became a major shift in my learning curve and helped me understand how competitive international AI environments work.",
     },
     {
       year: "2026",

@@ -13,7 +13,7 @@ export default function Projects() {
       title: "AI International Hackathon",
       subtitle: "as a Participant - Central Asian University",
       description:
-        "(Detailed in README) Participated in an international AI hackathon and achieved Top 1. This experience became a major shift in my learning curve and helped me understand international AI competition standards.",
+        "(Detailed in README) Participated in an international AI hackathon and achieved as a Participant. This experience became a major shift in my learning curve and helped me understand international AI competition standards.",
       image: cauImg,
       url: "https://github.com/Expanics/HACKATON_CAU2026/tree/main",
     },

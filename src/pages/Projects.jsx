@@ -11,7 +11,7 @@ export default function Projects() {
     {
       year: "2026",
       title: "AI International Hackathon",
-      subtitle: "Top 1 - Central Asian University",
+      subtitle: "as a Participant - Central Asian University",
       description:
         "(Detailed in README) Participated in an international AI hackathon and achieved Top 1. This experience became a major shift in my learning curve and helped me understand international AI competition standards.",
       image: cauImg,

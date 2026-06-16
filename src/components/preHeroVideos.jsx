@@ -1,11 +1,11 @@
 export default function PreHeroVideos() {
   const videos = [
     {
-      id: "k316J7NGCnw",
+      id: "Zrw-hQwfJ3",
       title: "Self-Intro Video",
     },
     {
-      id: "YOUR_REAL_VIDEO_2_ID",
+      id: "jHt7nRBpwsg",
       title: "Portfolio Creation Documentation",
     },
   ];

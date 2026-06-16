@@ -1,13 +1,14 @@
 import { useRef, useState, useEffect } from "react";
 import Background from "./Background";
 import OrbitLinks from "./OrbitLinks";
+import PreHeroVideos from "./PreHeroVideos";
 import TypingText from "./TypingText";
 
 export default function Hero() {
   // Scroll handling, especially animation is made by AI
   const sectionRef = useRef(null);
   const cardRef = useRef(null);
-  const bgRef = useRef(null);
+  // const bgRef = useRef(null);
 
   const [isDragging, setIsDragging] = useState(false);
 
@@ -50,9 +51,9 @@ export default function Hero() {
         scroll.current.y *= 0.9;
       }
 
-      if (bgRef.current) {
-        bgRef.current.style.transform = `translateY(${container.scrollTop * 0.3}px)`;
-      }
+      // if (bgRef.current) {
+      //   bgRef.current.style.transform = `translateY(${container.scrollTop * 0.3}px)`;
+      // }
 
       clearTimeout(timeout);
       timeout = setTimeout(() => {
@@ -131,42 +132,69 @@ export default function Hero() {
   return (
     <section
       ref={sectionRef}
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      className="relative min-h-[172vh] overflow-hidden bg-black isolate"
     >
-      {/* BACKGROUND */}
-      <div ref={bgRef} className="absolute inset-0 z-0">
+      {/* BACKGROUND - locked, no transform */}
+      <div className="absolute inset-0 z-0 pointer-events-none">
         <Background />
       </div>
 
-      {/* Typing Text */}
-      <div className="absolute top-20 left-1/2 -translate-x-1/2 z-20 pointer-events-none">
-        <TypingText />
-      </div>
+      {/* CONTENT */}
+      <div className="relative z-10 flex min-h-[172vh] flex-col items-center text-white">
+        {/* Typing text above videos */}
+        <div className="absolute top-16 md:top-20 left-1/2 -translate-x-1/2 z-20 pointer-events-none">
+          <TypingText />
+        </div>
 
-      {/* Profile + Orbit Links :) Even tho this is coded w AI, it requires a lot of re-prompt, especially suiting the z part */}
-      <div className="relative z-10">
-        <div
-          className="w-[320px] h-[400px]"
-          onMouseMove={(e) => {
-            handleMove(e);
-            handleDrag(e);
-          }}
-          onMouseDown={handleDown}
-          onMouseUp={handleUp}
-          onMouseLeave={handleUp}
-        >
-          <div ref={cardRef} className="w-full h-full">
-            <img
-              src="/photo.jpeg"
-              className="w-full h-full object-cover rounded-xl shadow-2xl"
-              draggable={false}
-            />
+        <PreHeroVideos />
+
+        <div className="h-24" />
+
+        {/* Profile Hero Area */}
+        <div className="relative min-h-screen w-full flex items-center justify-center">
+          <div className="relative z-10">
+            <h2
+              className="
+                absolute
+                -top-28
+                left-1/2
+                -translate-x-1/2
+                whitespace-nowrap
+                text-center
+                text-3xl md:text-3xl lg:text-4xl
+                font-light
+                tracking-[0.08em]
+                text-white/90
+              "
+              style={{ fontFamily: "Playfair Display, serif" }}
+            >
+              My Photo and Hyperlinks
+            </h2>
+            <div
+              className="w-[320px] h-[400px]"
+              onMouseMove={(e) => {
+                handleMove(e);
+                handleDrag(e);
+              }}
+              onMouseDown={handleDown}
+              onMouseUp={handleUp}
+              onMouseLeave={handleUp}
+            >
+              <div ref={cardRef} className="w-full h-full">
+                <img
+                  src="/photo.jpeg"
+                  className="w-full h-full object-cover rounded-xl shadow-2xl"
+                  draggable={false}
+                />
+              </div>
+            </div>
+
+            <OrbitLinks />
           </div>
         </div>
-        <OrbitLinks />
       </div>
 
-      <div className="pointer-events-none absolute bottom-0 left-0 w-full h-[30vh] bg-gradient-to-b from-transparent to-black z-10" />
+      <div className="pointer-events-none absolute bottom-0 left-0 w-full h-[35vh] bg-gradient-to-b from-transparent to-black z-20" />
     </section>
   );
 }

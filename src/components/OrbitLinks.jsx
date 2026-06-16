@@ -6,10 +6,9 @@ const LINKS = [
   { label: "LinkedIn", url: "https://www.linkedin.com/in/owen-putra-halim-2b9927322/" },
   { label: "CV", url: "https://drive.google.com/file/d/1u8G4W4RSILsQ5k80Nd-n5EeSaGaZeuZa/view?usp=sharing" },
   { label: "GitHub", url: "https://github.com/owenputra6" },
-  { label: "YouTube (in update)", url: "#" },
   { label: "Instagram", url: "https://www.instagram.com/neyyla.op?igsh=MWQ3cG1idzlobGI5bA%3D%3D&utm_source=qr" },
-  { label: "TikTok (in update)", url: "#" },
-  { label: "Email", url: "mailto:owenputraha@hgmail.com" },
+  { label: "Medium", url: "#https://medium.com/@owenputraha166" },
+  { label: "Email", url: "mailto:owenputraha@gmail.com" },
   { label: "Phone", url: "tel:+6285849672843" },
 ];
 

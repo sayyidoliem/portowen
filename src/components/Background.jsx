@@ -20,7 +20,7 @@ export default function Background() {
       />
 
       <div
-        className="fixed inset-0 opacity-60"
+        className="absolute inset-0 opacity-60"
         style={{
           backgroundImage: `
             radial-gradient(circle, rgba(255,255,255,0.9) 1.2px, transparent 2px),

@@ -5,10 +5,10 @@ import vitaepdf from "../assets/vitae.pdf";
 
 const LINKS = [
   { label: "LinkedIn", url: "https://www.linkedin.com/in/owen-putra-halim-2b9927322/" },
-  { label: "CV", url: "vitaepdf" },
+  { label: "CV", url: vitaepdf },
   { label: "GitHub", url: "https://github.com/owenputra6" },
   { label: "Instagram", url: "https://www.instagram.com/neyyla.op?igsh=MWQ3cG1idzlobGI5bA%3D%3D&utm_source=qr" },
-  { label: "Medium", url: "#https://medium.com/@owenputraha166" },
+  { label: "Medium", url: "https://medium.com/@owenputraha166" },
   { label: "Email", url: "mailto:owenputraha@gmail.com" },
   { label: "Phone", url: "tel:+6285849672843" },
 ];

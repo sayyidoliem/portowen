@@ -12,7 +12,6 @@ export default function PreHeroVideos() {
 
   return (
     <div className="relative w-full min-h-[72vh] flex items-center justify-center px-6 pt-36 pb-16 md:pt-44 md:pb-20 overflow-hidden">
-      
       {/* ONE STABLE DARK FADE ONLY */}
       <div
         className="
